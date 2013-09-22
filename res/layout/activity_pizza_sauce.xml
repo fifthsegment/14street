@@ -1,0 +1,124 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/background"
+    
+    tools:context=".Pizza_sauce" >
+
+    <RelativeLayout
+        android:id="@+id/horizontal_sauce"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_weight="0.07" >
+
+        <Button
+            android:id="@+id/pizza_sauce_veggies"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/pizza_veggies_bt" />
+
+        <Button
+            android:id="@+id/pizza_sauce_sauce"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+			android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            
+            android:layout_below="@+id/pizza_sauce_veggies"
+            android:background="@drawable/pizza_sauce_bt" />
+
+
+        
+</RelativeLayout>
+
+    <ListView
+        android:id="@+id/pizza_sauce_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.83"
+        android:drawSelectorOnTop="false"
+        android:fillViewport="true" >
+    </ListView>
+    
+    <RelativeLayout
+        android:id="@+id/pizza_select_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >  
+                
+		<Button
+		    android:id="@+id/pizza_sauce_toppings"
+		    android:layout_width="wrap_content"
+            android:layout_height="45dp"
+		    android:layout_below="@+id/pizza_sauce_select"
+		    
+		 
+		    android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+          
+		    android:background="@drawable/pizza_topping_bt" />  
+		<Button
+		    android:id="@+id/pizza_sauce_flavor"
+		    android:layout_width="wrap_content"
+            android:layout_height="45dp"
+		    android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/pizza_sauce_toppings"
+          
+		    android:background="@drawable/pizza_flavor_bt" />
+		<Button
+		    android:id="@+id/pizza_sauce_size"
+		    android:layout_width="wrap_content"
+            android:layout_height="45dp"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/pizza_sauce_flavor"
+		   
+            android:layout_alignParentRight="true"
+          
+		    android:background="@drawable/pizza_size_bt" />
+
+		<Button
+		    android:id="@+id/pizza_sauce_select"
+		    android:layout_width="wrap_content"
+		    android:layout_height="40dp"
+		    android:layout_alignParentRight="true"
+		    android:layout_alignParentTop="true"
+		    android:layout_marginRight="14dp"
+		    android:text="Select" />
+       
+         </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/Bottom_menu_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+
+    <Button
+        android:id="@+id/pizza_sauce_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+        
+        android:background="@drawable/reset_bt" />
+
+    <Button
+        android:id="@+id/pizza_sauce_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+        
+        
+        android:background="@drawable/done_bt" />
+    
+        </RelativeLayout>
+
+</LinearLayout>

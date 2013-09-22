@@ -1,0 +1,213 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/background"
+    
+    tools:context=".Pizza" >
+
+    <RelativeLayout
+        android:id="@+id/start_pizza_size"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_weight="1.05" >
+
+        <Button
+            android:id="@+id/pizza_size_veggies"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/pizza_veggies_bt" />
+
+        <Button
+            android:id="@+id/pizza_size_sauce"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+			android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            
+            android:layout_below="@+id/pizza_size_veggies"
+            android:background="@drawable/pizza_sauce_bt" />
+
+		<Button
+		    android:id="@+id/pizza_size_toppings"
+		    android:layout_width="wrap_content"
+            android:layout_height="45dp"
+		    android:layout_below="@+id/pizza_size_sauce"
+		    
+		 
+		    android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+          
+		    android:background="@drawable/pizza_topping_bt" />
+
+		<Button
+		    android:id="@+id/pizza_size_flavor"
+		    android:layout_width="wrap_content"
+            android:layout_height="45dp"
+		    android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+          
+		    android:layout_below="@+id/pizza_size_toppings"
+		    android:background="@drawable/pizza_flavor_bt" />
+		
+		<Button
+		    android:id="@+id/pizza_size_size"
+		    android:layout_width="wrap_content"
+            android:layout_height="45dp"
+		    android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+          
+		    android:layout_below="@+id/pizza_size_flavor"
+		    android:background="@drawable/pizza_size_bt" />
+
+		
+        
+</RelativeLayout>
+
+     <ViewFlipper
+         android:id="@+id/view_flipper"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="1.27" >
+            
+        <!--  The child Views/Layout to flip -->
+        
+        <!--  Layout 1 for 1st Screen -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/pizza_size1"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/pizza_size_1" />
+                    
+            </LinearLayout>
+            
+             <!--  Layout 2 for 2nd Screen -->
+            
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+       
+
+                    <ImageView
+                        android:layout_marginTop="15dp"
+                        android:id="@+id/pizza_size2"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:src="@drawable/pizza_size_2" />
+                    
+            </LinearLayout>
+             <!--  Layout 3 for 2nd Screen -->
+            
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+       
+
+                    <ImageView
+                        android:layout_marginTop="15dp"
+                        android:id="@+id/pizza_size3"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:src="@drawable/pizza_size_3" />
+                    
+            </LinearLayout>
+                         <!--  Layout 4 for 2nd Screen -->
+            
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+       
+
+                    <ImageView
+                        android:layout_marginTop="15dp"
+                        android:id="@+id/pizza_size4"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:src="@drawable/pizza_size_4" />
+                    
+            </LinearLayout>
+                         <!--  Layout 5 for 2nd Screen -->
+            
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+       
+
+                    <ImageView
+                        android:layout_marginTop="15dp"
+                        android:id="@+id/pizza_size5"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:src="@drawable/pizza_size_5" />
+                    
+            </LinearLayout>
+            
+
+        </ViewFlipper>
+
+    <RelativeLayout
+        android:id="@+id/pizza_select_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+         
+		<Button
+		    android:id="@+id/pizza_size_select"
+		    android:layout_width="wrap_content"
+		    android:layout_height="40dp"
+		    android:layout_alignParentRight="true"
+		    android:layout_alignParentTop="true"
+		    android:layout_marginRight="14dp"
+		    android:text="Select" />
+                
+
+</RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/Bottom_menu_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+
+    <Button
+        android:id="@+id/pizza_size_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+        
+        android:background="@drawable/reset_bt" />
+
+    <Button
+        android:id="@+id/pizza_size_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/done_bt" />
+    
+        </RelativeLayout>
+
+</LinearLayout>

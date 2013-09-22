@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:context=".Sidelines" >
+
+        <ViewFlipper
+            android:id="@+id/view_flipper"
+            android:layout_width="match_parent"
+            android:layout_height="346dp" >
+            
+        <!--  The child Views/Layout to flip -->
+        
+        <!--  Layout 1 for 1st Screen -->
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/deal1"
+                            android:layout_alignParentBottom="true"
+                                                android:layout_alignParentTop="true"
+                                                android:layout_alignParentLeft="true"
+                                                android:layout_alignParentRight="true"
+                    
+                    android:layout_width="300dp"
+                    android:layout_height="280dp"
+                    android:src="@drawable/slice_deal_bt_large" />
+
+            </RelativeLayout>
+            
+             <!--  Layout 2 for 2nd Screen -->
+            
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/deal2"
+                            android:layout_alignParentBottom="true"
+                                                android:layout_alignParentTop="true"
+                                                android:layout_alignParentLeft="true"
+                                                android:layout_alignParentRight="true"
+                    
+                    android:layout_width="300dp"
+                    android:layout_height="280dp"
+                    android:src="@drawable/midnight_deal_2_bt_large" />
+
+            </RelativeLayout>
+            
+             <!--  Layout 3 for 2nd Screen -->
+            
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/deal3"
+                            android:layout_alignParentBottom="true"
+                                                android:layout_alignParentTop="true"
+                                                android:layout_alignParentLeft="true"
+                                                android:layout_alignParentRight="true"
+                    
+                    android:layout_width="300dp"
+                    android:layout_height="280dp"
+                    android:src="@drawable/midnight_deal_1_bt_large" />
+                </RelativeLayout>
+             <!--  Layout 4 for 2nd Screen -->
+            
+                        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/deal4"
+                            android:layout_alignParentBottom="true"
+                                                android:layout_alignParentTop="true"
+                                                android:layout_alignParentLeft="true"
+                                                android:layout_alignParentRight="true"
+                    
+                    android:layout_width="300dp"
+                    android:layout_height="280dp"
+                    android:src="@drawable/double_slice_deal_bt_large" /> 
+                    </RelativeLayout>
+               </ViewFlipper>
+
+    <Button
+        android:id="@+id/select_deals"
+        android:layout_below="@+id/view_flipper"
+        
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/order_now_bt" />
+
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_screen_bg"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Panic" >
+
+    <ImageView
+        android:id="@+id/panic_panic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/panic_bt" />
+
+      <ImageView
+          android:id="@+id/panic_twitter"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:layout_centerHorizontal="true"
+          android:src="@drawable/twitter_icon" />
+      <ImageView
+          android:id="@+id/panic_gplus"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignTop="@+id/panic_twitter"
+          android:layout_toLeftOf="@+id/panic_twitter"
+          android:src="@drawable/gplus_icon" />
+      
+
+      <ImageView
+          android:id="@+id/panic_fb"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignTop="@+id/panic_twitter"
+          android:layout_toRightOf="@+id/panic_twitter"
+          android:src="@drawable/facebook_icon" />
+
+      <ImageView
+          android:id="@+id/panic_order"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/panic_panic"
+          android:layout_centerHorizontal="true"
+          android:src="@drawable/order_now_bt_200" />
+    
+</RelativeLayout>

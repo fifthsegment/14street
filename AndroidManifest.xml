@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.newpizza"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="14th Street Pizza app"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.newpizza.MainActivity"
+            android:label="Launch"
+            android:screenOrientation="nosensor" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.newpizza.Category"
+            android:label="Order Categories"
+            android:screenOrientation="nosensor" >
+        </activity>
+        <activity
+            android:name="com.example.newpizza.Drinks"
+            android:label="Drinks"
+            android:screenOrientation="nosensor" >
+        </activity>
+        <activity
+            android:name="com.example.newpizza.Sidelines"
+            android:label="Sidelines"
+            android:screenOrientation="nosensor" >
+        </activity>
+        <activity
+            android:name="com.example.newpizza.Sweetsomethings"
+            android:label="Sweetsomethings"
+            android:screenOrientation="nosensor" >
+        </activity>
+        <activity
+            android:name="com.example.newpizza.Pizza"
+            android:label="Pizza"
+            android:screenOrientation="nosensor" >
+        </activity>
+        <activity
+            android:name="com.example.newpizza.Pizza_veggies"
+            android:label="Pizza Veggies"
+            android:screenOrientation="nosensor" >
+        </activity>
+        <activity
+            android:name="com.example.newpizza.Pizza_flavor"
+            android:label="Pizza Flavor"
+            android:screenOrientation="nosensor" >
+        </activity>
+        <activity
+            android:name="com.example.newpizza.Pizza_toppings"
+            android:label="Pizza Toppings"
+            android:screenOrientation="nosensor" >
+        </activity>
+        <activity
+            android:name="com.example.newpizza.Pizza_sauce"
+            android:label="Pizza Sauce"
+            android:screenOrientation="nosensor" >
+        </activity>
+        <activity
+            android:name="com.example.newpizza.Confirm_order"
+            android:label="Confirm Order"
+            android:screenOrientation="nosensor" >
+        </activity>
+        <activity
+            android:name="com.example.newpizza.Deals"
+            android:label="@string/title_activity_deals"
+            android:screenOrientation="nosensor" >
+        </activity>
+        <activity
+            android:name="com.example.newpizza.Panic"
+            android:label="@string/title_activity_panic"
+            android:screenOrientation="nosensor" >
+        </activity>
+        <activity
+            android:name="com.example.newpizza.Order"
+            android:label="@string/title_activity_order"
+            android:screenOrientation="nosensor" >
+        </activity>
+        <activity
+            android:name="com.example.newpizza.Regular_order"
+            android:label="@string/title_activity_regular_order" >
+        </activity>
+    </application>
+
+</manifest>
