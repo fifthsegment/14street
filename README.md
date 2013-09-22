@@ -16,7 +16,7 @@ One very important feature is that our app does not need any database backing, s
 #Shortcomings#
 Unfortunately we were late in discovering the competition and only had a few days to develop the app, however we have strived to make it as complete in functionality and as interactive as we could in the short time span. Also we did not have much time left over for testing hence the app is liable to contain bugs.
 However, we are not just stopping here and would love to hear your recommendations and incorporate them in our app, and remove any bugs that remaining order to make this app perfect for you.
-Competition Entry Details
+
 
 #Application developed by: 5th segment#
 Contact: abdullahirfan[at]outlook.com, mehrozezahid[at]gmail.com 
