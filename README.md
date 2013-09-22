@@ -1,7 +1,8 @@
 #14th Street Pizza – Android app#
 
 This app was developed as an entry for the app challenge by 14th Street Pizza organized by GDG Karachi.
-About our Design
+
+#About our Design#
 Our aim was to design an app with a simple yet interactive interface keeping in mind the original style of the 14th Street pizza as illustrated in their website. The app enables the user to cycle quickly through the steps involved in placing an order with ease without it seeming long and tedious. The app will then send the required order to an email address of the companies choice.
 
 #Compatibility#
@@ -18,4 +19,4 @@ However, we are not just stopping here and would love to hear your recommendatio
 Competition Entry Details
 
 #Application developed by: 5th segment#
-Contact: abdullahirfan@outlook.com, mehrozezahid@gmail.com 
+Contact: abdullahirfan[at]outlook.com, mehrozezahid[at]gmail.com 
