@@ -1,6 +1,6 @@
 #14th Street Pizza – Android app [Revised]#
 
-##This is the Revised version of this app (with all bugs fixed) for the new Deadline. ##
+This is a revised version of this app (with all bugs fixed) for the new Deadline.
 
 This app was developed as an entry for the app challenge by 14th Street Pizza organized by GDG Karachi.
 
