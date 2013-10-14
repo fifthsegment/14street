@@ -9,96 +9,95 @@
             android:background="@drawable/background"
         
          >
-        <RelativeLayout 
-    android:id="@+id/LinearLayout1"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/background"
-    android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".Category" >
+
+        <RelativeLayout
+            android:id="@+id/LinearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            tools:context=".Category" >
 
     <Button
         android:id="@+id/pizza_button"
         android:layout_width="match_parent"
-        android:layout_height="88dp"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true"
+        
         android:layout_centerHorizontal="true"
         android:background="@drawable/pizza_bt" />
 
     <Button
         android:id="@+id/sweets_button"
-        android:layout_width="wrap_content"
-        android:layout_height="88dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+        
         android:layout_alignRight="@+id/drinks_button"
         android:layout_below="@+id/drinks_button"
         android:background="@drawable/sweet_bt" />
 
     <Button
         android:id="@+id/sidelines_button"
-        android:layout_width="wrap_content"
-        android:layout_height="88dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignLeft="@+id/pizza_button"
-        android:layout_alignRight="@+id/pizza_button"
+        android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true"
+        
         android:layout_below="@+id/pizza_button"
         android:background="@drawable/sidelines_bt" />
 
     <Button
         android:id="@+id/drinks_button"
-        android:layout_width="wrap_content"
-        android:layout_height="88dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignLeft="@+id/sidelines_button"
         android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true"
+        
         android:layout_below="@+id/sidelines_button"
         android:background="@drawable/drinks_bt" />
 
     <Button
         android:id="@+id/deals_button"
-        android:layout_width="wrap_content"
-        android:layout_height="88dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignLeft="@+id/sweets_button"
         android:layout_alignRight="@+id/sweets_button"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+        
         android:layout_below="@+id/sweets_button"
         android:background="@drawable/deals_bt" />
 
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:layout_alignLeft="@+id/deals_button"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_below="@+id/deals_button"
         android:layout_marginTop="18dp"
         android:background="@drawable/your_order_main_bt" />
-
+    
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button_exit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_below="@+id/button1"
-        android:layout_marginTop="26dp"
-        android:background="@drawable/facebook_icon" />
+        android:layout_marginTop="18dp"
+        android:background="@drawable/exit_bt" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/button2"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/twitter_icon" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button3"
-        android:layout_alignBottom="@+id/button3"
-        android:layout_alignRight="@+id/button1"
-        android:background="@drawable/gplus_icon" />
-  
 </RelativeLayout>
 </ScrollView>

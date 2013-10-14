@@ -3,6 +3,7 @@ package com.example.newpizza;
 import com.newPizza.order.order;
 
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 public class Deals extends Activity {
@@ -34,6 +36,8 @@ public class Deals extends Activity {
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_deals);
+	    Toast.makeText(Deals.this, "Swipe Left & Right", Toast.LENGTH_SHORT).show();
+
         viewFlipper = (ViewFlipper) findViewById(R.id.view_flipper);
    		Button select_selectBtn=(Button) findViewById(R.id.select_deals);
 
@@ -69,7 +73,7 @@ public class Deals extends Activity {
 		    	if(order.drinks_order==" ")
 			    	   order.deals_order=order.drinks_order.concat(a);
 			       else
-			    	   order.deals_order=order.drinks_order.concat(","+a);		    	
+			    	   order.deals_order=order.drinks_order.concat("\n"+a);		    	
 		    	
 		    	Intent home=new Intent(Deals.this, Confirm_order.class);
 		        startActivity(home);
@@ -79,6 +83,7 @@ public class Deals extends Activity {
 	}
 	public boolean onTouchEvent(MotionEvent touchevent) 
     {
+
                  switch (touchevent.getAction())
                  {
                         // when user first touches the screen to swap
@@ -140,5 +145,13 @@ public class Deals extends Activity {
 		getMenuInflater().inflate(R.menu.deals, menu);
 		return true;
 	}
-
+	@Override
+	public void onBackPressed() {
+		order.deals_order=" ";
+		
+    	Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE) ;
+		vibe.vibrate(50);
+		Intent home=new Intent(Deals.this, Category.class);
+        startActivity(home);
+	}
 }

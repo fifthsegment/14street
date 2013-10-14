@@ -4,9 +4,35 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true" />
+
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="17" />
+
+    <permission
+        android:name="com.example.newpizza.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.newpizza.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- Required to show current location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.VIBRATE" />
+    
+    <!-- Required OpenGL ES 2.0. for Maps V2 -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -15,7 +41,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.example.newpizza.MainActivity"
-            android:label="Launch"
+            android:label="14th Street App Team NUST"
             android:screenOrientation="nosensor" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -90,7 +116,34 @@
         </activity>
         <activity
             android:name="com.example.newpizza.Regular_order"
-            android:label="@string/title_activity_regular_order" >
+            android:label="@string/title_activity_regular_order"
+            android:screenOrientation="nosensor" >
+        </activity>
+        <activity
+            android:name="com.example.newpizza.Pizza_flavor2"
+            android:label="@string/title_activity_pizza_flavor2"
+            android:screenOrientation="nosensor" >
+        </activity>
+        <activity
+            android:name="com.example.newpizza.Quantity"
+            android:label="@string/title_activity_quantity"
+            android:screenOrientation="nosensor" >
+        </activity>
+        <activity
+            android:name="com.example.newpizza.Address"
+            android:label="@string/title_activity_address"
+            android:screenOrientation="nosensor" >
+        </activity>
+
+        <!-- Goolge Maps API Key -->
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBEM-ebwgkOUCpxKKjmfW2jPkLMrgQC6wY" />
+
+        <activity
+            android:name="com.example.newpizza.Final_order"
+            android:label="@string/title_activity_final_order"
+            android:screenOrientation="nosensor" >
         </activity>
     </application>
 

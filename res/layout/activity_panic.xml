@@ -23,6 +23,8 @@
           android:layout_height="wrap_content"
           android:layout_alignParentBottom="true"
           android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+          
           android:src="@drawable/twitter_icon" />
       <ImageView
           android:id="@+id/panic_gplus"
@@ -30,6 +32,8 @@
           android:layout_height="wrap_content"
           android:layout_alignTop="@+id/panic_twitter"
           android:layout_toLeftOf="@+id/panic_twitter"
+                            android:layout_marginTop="10dp"
+          
           android:src="@drawable/gplus_icon" />
       
 
@@ -39,6 +43,8 @@
           android:layout_height="wrap_content"
           android:layout_alignTop="@+id/panic_twitter"
           android:layout_toRightOf="@+id/panic_twitter"
+                            android:layout_marginTop="10dp"
+          
           android:src="@drawable/facebook_icon" />
 
       <ImageView
@@ -46,6 +52,8 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_below="@+id/panic_panic"
+                  android:layout_marginTop="10dp"
+          
           android:layout_centerHorizontal="true"
           android:src="@drawable/order_now_bt_200" />
     

@@ -9,6 +9,140 @@ package com.example.newpizza;
 
 public final class R {
     public static final class attr {
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int cameraBearing=0x7f010001;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int cameraTargetLat=0x7f010002;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int cameraTargetLng=0x7f010003;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int cameraTilt=0x7f010004;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int cameraZoom=0x7f010005;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>none</code></td><td>0</td><td></td></tr>
+<tr><td><code>normal</code></td><td>1</td><td></td></tr>
+<tr><td><code>satellite</code></td><td>2</td><td></td></tr>
+<tr><td><code>terrain</code></td><td>3</td><td></td></tr>
+<tr><td><code>hybrid</code></td><td>4</td><td></td></tr>
+</table>
+         */
+        public static final int mapType=0x7f010000;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int uiCompass=0x7f010006;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int uiRotateGestures=0x7f010007;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int uiScrollGestures=0x7f010008;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int uiTiltGestures=0x7f010009;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int uiZoomControls=0x7f01000a;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int uiZoomGestures=0x7f01000b;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int useViewLifecycle=0x7f01000c;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int zOrderOnTop=0x7f01000d;
+    }
+    public static final class color {
+        public static final int common_action_bar_splitter=0x7f040009;
+        /**  Sign-in Button Colors 
+         */
+        public static final int common_signin_btn_dark_text_default=0x7f040000;
+        public static final int common_signin_btn_dark_text_disabled=0x7f040002;
+        public static final int common_signin_btn_dark_text_focused=0x7f040003;
+        public static final int common_signin_btn_dark_text_pressed=0x7f040001;
+        public static final int common_signin_btn_default_background=0x7f040008;
+        public static final int common_signin_btn_light_text_default=0x7f040004;
+        public static final int common_signin_btn_light_text_disabled=0x7f040006;
+        public static final int common_signin_btn_light_text_focused=0x7f040007;
+        public static final int common_signin_btn_light_text_pressed=0x7f040005;
+        public static final int common_signin_btn_text_dark=0x7f04000a;
+        public static final int common_signin_btn_text_light=0x7f04000b;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -17,219 +151,439 @@ public final class R {
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f040000;
-        public static final int activity_vertical_margin=0x7f040001;
+        public static final int activity_horizontal_margin=0x7f070000;
+        public static final int activity_vertical_margin=0x7f070001;
     }
     public static final class drawable {
         public static final int add_another_bt=0x7f020000;
-        public static final int add_items_bt=0x7f020001;
-        public static final int background=0x7f020002;
-        public static final int deals_bt=0x7f020003;
-        public static final int done_bt=0x7f020004;
-        public static final int double_slice_deal_bt=0x7f020005;
-        public static final int double_slice_deal_bt_large=0x7f020006;
-        public static final int drinks_bt=0x7f020007;
-        public static final int exit_bt=0x7f020008;
-        public static final int f_g_t_integration=0x7f020009;
-        public static final int facebook_icon=0x7f02000a;
-        public static final int gplus_icon=0x7f02000b;
-        public static final int home_bt=0x7f02000c;
-        public static final int home_reset_done_screen=0x7f02000d;
-        public static final int ic_launcher=0x7f02000e;
-        public static final int loading=0x7f02000f;
-        public static final int logo=0x7f020010;
-        public static final int main_screen_bg=0x7f020011;
-        public static final int main_screen_sample=0x7f020012;
-        public static final int midnight_deal_1_bt=0x7f020013;
-        public static final int midnight_deal_1_bt_large=0x7f020014;
-        public static final int midnight_deal_2_bt=0x7f020015;
-        public static final int midnight_deal_2_bt_large=0x7f020016;
-        public static final int order_now_bt=0x7f020017;
-        public static final int order_now_bt_200=0x7f020018;
-        public static final int panic_bt=0x7f020019;
-        public static final int pizza_bt=0x7f02001a;
-        public static final int pizza_flavor_bt=0x7f02001b;
-        public static final int pizza_sauce_bt=0x7f02001c;
-        public static final int pizza_select_bt=0x7f02001d;
-        public static final int pizza_siza1=0x7f02001e;
-        public static final int pizza_size2=0x7f02001f;
-        public static final int pizza_size3=0x7f020020;
-        public static final int pizza_size4=0x7f020021;
-        public static final int pizza_size_1=0x7f020022;
-        public static final int pizza_size_2=0x7f020023;
-        public static final int pizza_size_3=0x7f020024;
-        public static final int pizza_size_4=0x7f020025;
-        public static final int pizza_size_5=0x7f020026;
-        public static final int pizza_size_bt=0x7f020027;
-        public static final int pizza_topping_bt=0x7f020028;
-        public static final int pizza_veggies_bt=0x7f020029;
-        public static final int reset_bt=0x7f02002a;
-        public static final int sidelines_bt=0x7f02002b;
-        public static final int slice_deal_bt=0x7f02002c;
-        public static final int slice_deal_bt_large=0x7f02002d;
-        public static final int sweet_bt=0x7f02002e;
-        public static final int twitter_icon=0x7f02002f;
-        public static final int your_order_bt=0x7f020030;
-        public static final int your_order_main_bt=0x7f020031;
+        public static final int add_another_bt_pressed=0x7f020001;
+        public static final int add_another_bt_unpressed=0x7f020002;
+        public static final int add_items_bt=0x7f020003;
+        public static final int add_items_bt_pressed=0x7f020004;
+        public static final int add_items_bt_unpressed=0x7f020005;
+        public static final int background=0x7f020006;
+        public static final int common_signin_btn_icon_dark=0x7f020007;
+        public static final int common_signin_btn_icon_disabled_dark=0x7f020008;
+        public static final int common_signin_btn_icon_disabled_focus_dark=0x7f020009;
+        public static final int common_signin_btn_icon_disabled_focus_light=0x7f02000a;
+        public static final int common_signin_btn_icon_disabled_light=0x7f02000b;
+        public static final int common_signin_btn_icon_focus_dark=0x7f02000c;
+        public static final int common_signin_btn_icon_focus_light=0x7f02000d;
+        public static final int common_signin_btn_icon_light=0x7f02000e;
+        public static final int common_signin_btn_icon_normal_dark=0x7f02000f;
+        public static final int common_signin_btn_icon_normal_light=0x7f020010;
+        public static final int common_signin_btn_icon_pressed_dark=0x7f020011;
+        public static final int common_signin_btn_icon_pressed_light=0x7f020012;
+        public static final int common_signin_btn_text_dark=0x7f020013;
+        public static final int common_signin_btn_text_disabled_dark=0x7f020014;
+        public static final int common_signin_btn_text_disabled_focus_dark=0x7f020015;
+        public static final int common_signin_btn_text_disabled_focus_light=0x7f020016;
+        public static final int common_signin_btn_text_disabled_light=0x7f020017;
+        public static final int common_signin_btn_text_focus_dark=0x7f020018;
+        public static final int common_signin_btn_text_focus_light=0x7f020019;
+        public static final int common_signin_btn_text_light=0x7f02001a;
+        public static final int common_signin_btn_text_normal_dark=0x7f02001b;
+        public static final int common_signin_btn_text_normal_light=0x7f02001c;
+        public static final int common_signin_btn_text_pressed_dark=0x7f02001d;
+        public static final int common_signin_btn_text_pressed_light=0x7f02001e;
+        public static final int deals_bt=0x7f02001f;
+        public static final int deals_bt_pressed=0x7f020020;
+        public static final int deals_bt_unpressed=0x7f020021;
+        public static final int done_bt=0x7f020022;
+        public static final int done_bt_pressed=0x7f020023;
+        public static final int done_bt_unpressed=0x7f020024;
+        public static final int double_slice_deal_bt=0x7f020025;
+        public static final int double_slice_deal_bt_large=0x7f020026;
+        public static final int double_slice_deal_bt_pressed=0x7f020027;
+        public static final int double_slice_deal_bt_unpressed=0x7f020028;
+        public static final int drinks_bt=0x7f020029;
+        public static final int drinks_bt_pressed=0x7f02002a;
+        public static final int drinks_bt_unpressed=0x7f02002b;
+        public static final int exit_bt=0x7f02002c;
+        public static final int exit_bt_pressed=0x7f02002d;
+        public static final int exit_bt_unpressed=0x7f02002e;
+        public static final int facebook_icon=0x7f02002f;
+        public static final int facebook_icon_pressed=0x7f020030;
+        public static final int facebook_icon_unpressed=0x7f020031;
+        public static final int gplus_icon=0x7f020032;
+        public static final int gplus_icon_pressed=0x7f020033;
+        public static final int gplus_icon_unpressed=0x7f020034;
+        public static final int home_bt=0x7f020035;
+        public static final int home_bt_pressed=0x7f020036;
+        public static final int home_bt_unpressed=0x7f020037;
+        public static final int ic_launcher=0x7f020038;
+        public static final int ic_plusone_medium_off_client=0x7f020039;
+        public static final int ic_plusone_small_off_client=0x7f02003a;
+        public static final int ic_plusone_standard_off_client=0x7f02003b;
+        public static final int ic_plusone_tall_off_client=0x7f02003c;
+        public static final int logo=0x7f02003d;
+        public static final int main_screen_bg=0x7f02003e;
+        public static final int midnight_deal_1_bt=0x7f02003f;
+        public static final int midnight_deal_1_bt_large=0x7f020040;
+        public static final int midnight_deal_1_bt_pressed=0x7f020041;
+        public static final int midnight_deal_1_bt_unpressed=0x7f020042;
+        public static final int midnight_deal_2_bt=0x7f020043;
+        public static final int midnight_deal_2_bt_large=0x7f020044;
+        public static final int midnight_deal_2_bt_pressed=0x7f020045;
+        public static final int midnight_deal_2_bt_unpressed=0x7f020046;
+        public static final int next_bt=0x7f020047;
+        public static final int next_bt_pressed=0x7f020048;
+        public static final int next_bt_unpressed=0x7f020049;
+        public static final int order_now_bt=0x7f02004a;
+        public static final int order_now_bt_200=0x7f02004b;
+        public static final int order_now_bt_200_pressed=0x7f02004c;
+        public static final int order_now_bt_200_unpressed=0x7f02004d;
+        public static final int order_now_bt_pressed=0x7f02004e;
+        public static final int order_now_bt_unpressed=0x7f02004f;
+        public static final int panic_bt=0x7f020050;
+        public static final int panic_bt_pressed=0x7f020051;
+        public static final int panic_bt_unpressed=0x7f020052;
+        public static final int pizza_bt=0x7f020053;
+        public static final int pizza_bt_pressed=0x7f020054;
+        public static final int pizza_bt_unpressed=0x7f020055;
+        public static final int pizza_flavor_bt=0x7f020056;
+        public static final int pizza_flavor_bt_pressed=0x7f020057;
+        public static final int pizza_flavor_bt_unpressed=0x7f020058;
+        public static final int pizza_sauce_bt=0x7f020059;
+        public static final int pizza_sauce_bt_pressed=0x7f02005a;
+        public static final int pizza_sauce_bt_unpressed=0x7f02005b;
+        public static final int pizza_select_bt=0x7f02005c;
+        public static final int pizza_select_bt_pressed=0x7f02005d;
+        public static final int pizza_select_bt_unpressed=0x7f02005e;
+        public static final int pizza_size_1=0x7f02005f;
+        public static final int pizza_size_1_pressed=0x7f020060;
+        public static final int pizza_size_1_unpressed=0x7f020061;
+        public static final int pizza_size_2=0x7f020062;
+        public static final int pizza_size_2_pressed=0x7f020063;
+        public static final int pizza_size_2_unpressed=0x7f020064;
+        public static final int pizza_size_3=0x7f020065;
+        public static final int pizza_size_3_pressed=0x7f020066;
+        public static final int pizza_size_3_unpressed=0x7f020067;
+        public static final int pizza_size_4=0x7f020068;
+        public static final int pizza_size_4_pressed=0x7f020069;
+        public static final int pizza_size_4_unpressed=0x7f02006a;
+        public static final int pizza_size_5=0x7f02006b;
+        public static final int pizza_size_5_pressed=0x7f02006c;
+        public static final int pizza_size_5_unpressed=0x7f02006d;
+        public static final int pizza_size_bt=0x7f02006e;
+        public static final int pizza_size_bt_pressed=0x7f02006f;
+        public static final int pizza_size_bt_unpressed=0x7f020070;
+        public static final int pizza_topping_bt=0x7f020071;
+        public static final int pizza_topping_bt_pressed=0x7f020072;
+        public static final int pizza_topping_bt_unpressed=0x7f020073;
+        public static final int pizza_veggies_bt=0x7f020074;
+        public static final int pizza_veggies_bt_pressed=0x7f020075;
+        public static final int pizza_veggies_bt_unpressed=0x7f020076;
+        public static final int prev_bt=0x7f020077;
+        public static final int prev_bt_pressed=0x7f020078;
+        public static final int prev_bt_unpressed=0x7f020079;
+        public static final int reset_bt=0x7f02007a;
+        public static final int reset_bt_pressed=0x7f02007b;
+        public static final int reset_bt_unpressed=0x7f02007c;
+        public static final int sidelines_bt=0x7f02007d;
+        public static final int sidelines_bt_pressed=0x7f02007e;
+        public static final int sidelines_bt_unpressed=0x7f02007f;
+        public static final int slct=0x7f020080;
+        public static final int slct_pressed=0x7f020081;
+        public static final int slct_unpressed=0x7f020082;
+        public static final int slice_deal_bt=0x7f020083;
+        public static final int slice_deal_bt_large=0x7f020084;
+        public static final int slice_deal_bt_pressed=0x7f020085;
+        public static final int slice_deal_bt_unpressed=0x7f020086;
+        public static final int sweet_bt=0x7f020087;
+        public static final int sweet_bt_pressed=0x7f020088;
+        public static final int sweet_bt_unpressed=0x7f020089;
+        public static final int twitter_icon=0x7f02008a;
+        public static final int twitter_icon_pressed=0x7f02008b;
+        public static final int twitter_icon_unpressed=0x7f02008c;
+        public static final int your_order_bt=0x7f02008d;
+        public static final int your_order_bt_pressed=0x7f02008e;
+        public static final int your_order_bt_unpressed=0x7f02008f;
+        public static final int your_order_main_bt=0x7f020090;
+        public static final int your_order_main_bt_pressed=0x7f020091;
+        public static final int your_order_main_bt_unpressed=0x7f020092;
     }
     public static final class id {
-        public static final int Bottom_menu_size=0x7f080029;
-        public static final int LinearLayout1=0x7f080001;
-        public static final int action_settings=0x7f080062;
-        public static final int button1=0x7f080007;
-        public static final int button2=0x7f080008;
-        public static final int button3=0x7f080009;
-        public static final int button4=0x7f08000a;
-        public static final int checkBox1=0x7f08005e;
-        public static final int checkBox2=0x7f080061;
-        public static final int checkedTextView1=0x7f08005f;
-        public static final int deal1=0x7f08000f;
-        public static final int deal2=0x7f080010;
-        public static final int deal3=0x7f080011;
-        public static final int deal4=0x7f080012;
-        public static final int deals_button=0x7f080006;
-        public static final int display_order_view=0x7f08000b;
-        public static final int drinks_button=0x7f080004;
-        public static final int drinks_done=0x7f080015;
-        public static final int drinks_menu=0x7f080014;
-        public static final int drinks_reset=0x7f080016;
-        public static final int horizontal_sauce=0x7f080036;
-        public static final int horizontal_sidelines=0x7f08002c;
-        public static final int horizontal_toppings=0x7f080040;
-        public static final int horizontal_veggies=0x7f08004a;
-        public static final int main_fb=0x7f080057;
-        public static final int main_gplus=0x7f080056;
-        public static final int main_order=0x7f080055;
-        public static final int main_twitter=0x7f080054;
-        public static final int order_add_other=0x7f08000c;
-        public static final int order_confirmText=0x7f08000d;
-        public static final int panic_fb=0x7f08001a;
-        public static final int panic_gplus=0x7f080019;
-        public static final int panic_order=0x7f08001b;
-        public static final int panic_panic=0x7f080017;
-        public static final int panic_twitter=0x7f080018;
-        public static final int pizza_button=0x7f080002;
-        public static final int pizza_flavor_done=0x7f080035;
-        public static final int pizza_flavor_flavor=0x7f080030;
-        public static final int pizza_flavor_list=0x7f080031;
-        public static final int pizza_flavor_reset=0x7f080034;
-        public static final int pizza_flavor_sauce=0x7f08002e;
-        public static final int pizza_flavor_select=0x7f080033;
-        public static final int pizza_flavor_size=0x7f080032;
-        public static final int pizza_flavor_toppings=0x7f08002f;
-        public static final int pizza_flavor_veggies=0x7f08002d;
-        public static final int pizza_sauce_done=0x7f08003f;
-        public static final int pizza_sauce_flavor=0x7f08003c;
-        public static final int pizza_sauce_list=0x7f080039;
-        public static final int pizza_sauce_reset=0x7f08003e;
-        public static final int pizza_sauce_sauce=0x7f080038;
-        public static final int pizza_sauce_select=0x7f08003b;
-        public static final int pizza_sauce_size=0x7f08003d;
-        public static final int pizza_sauce_toppings=0x7f08003a;
-        public static final int pizza_sauce_veggies=0x7f080037;
-        public static final int pizza_select_option=0x7f080027;
-        public static final int pizza_size1=0x7f080022;
-        public static final int pizza_size2=0x7f080023;
-        public static final int pizza_size3=0x7f080024;
-        public static final int pizza_size4=0x7f080025;
-        public static final int pizza_size5=0x7f080026;
-        public static final int pizza_size_done=0x7f08002b;
-        public static final int pizza_size_flavor=0x7f080020;
-        public static final int pizza_size_reset=0x7f08002a;
-        public static final int pizza_size_sauce=0x7f08001e;
-        public static final int pizza_size_select=0x7f080028;
-        public static final int pizza_size_size=0x7f080021;
-        public static final int pizza_size_toppings=0x7f08001f;
-        public static final int pizza_size_veggies=0x7f08001d;
-        public static final int pizza_toppings_done=0x7f080049;
-        public static final int pizza_toppings_flavor=0x7f080045;
-        public static final int pizza_toppings_list=0x7f080044;
-        public static final int pizza_toppings_reset=0x7f080048;
-        public static final int pizza_toppings_sauce=0x7f080042;
-        public static final int pizza_toppings_select=0x7f080046;
-        public static final int pizza_toppings_size=0x7f080047;
-        public static final int pizza_toppings_toppings=0x7f080043;
-        public static final int pizza_toppings_veggies=0x7f080041;
-        public static final int pizza_veggies_done=0x7f080053;
-        public static final int pizza_veggies_flavor=0x7f080050;
-        public static final int pizza_veggies_list=0x7f08004c;
-        public static final int pizza_veggies_reset=0x7f080052;
-        public static final int pizza_veggies_sauce=0x7f08004d;
-        public static final int pizza_veggies_select=0x7f08004e;
-        public static final int pizza_veggies_size=0x7f080051;
-        public static final int pizza_veggies_toppings=0x7f08004f;
-        public static final int pizza_veggies_veggies=0x7f08004b;
-        public static final int scrollView1=0x7f080000;
-        public static final int select_deals=0x7f080013;
-        public static final int sidelines_button=0x7f080005;
-        public static final int sidelines_done=0x7f080059;
-        public static final int sidelines_menu=0x7f080058;
-        public static final int sidelines_reset=0x7f08005a;
-        public static final int start_pizza_size=0x7f08001c;
-        public static final int sweets_button=0x7f080003;
-        public static final int sweetsomethings_done=0x7f08005c;
-        public static final int sweetsomethings_menu=0x7f08005b;
-        public static final int sweetsomethings_reset=0x7f08005d;
-        public static final int textView1=0x7f080060;
-        public static final int view_flipper=0x7f08000e;
+        public static final int Bottom_menu_size=0x7f050035;
+        public static final int LinearLayout1=0x7f050007;
+        public static final int action_settings=0x7f050079;
+        public static final int button1=0x7f05000d;
+        public static final int button_exit=0x7f05000e;
+        public static final int checkBox1=0x7f050076;
+        public static final int checkBox2=0x7f050078;
+        public static final int checkedTextView1=0x7f050077;
+        public static final int deal1=0x7f050015;
+        public static final int deal2=0x7f050016;
+        public static final int deal3=0x7f050017;
+        public static final int deal4=0x7f050018;
+        public static final int deals_button=0x7f05000c;
+        public static final int display_final_order_view=0x7f05001d;
+        public static final int display_order_view=0x7f05000f;
+        public static final int drinks_button=0x7f05000a;
+        public static final int drinks_done=0x7f05001b;
+        public static final int drinks_menu=0x7f05001a;
+        public static final int drinks_reset=0x7f05001c;
+        public static final int editText_final_order=0x7f05001f;
+        public static final int final_order_confirmText=0x7f05001e;
+        public static final int horizontal_sauce=0x7f05004e;
+        public static final int horizontal_sidelines=0x7f050038;
+        public static final int horizontal_toppings=0x7f050058;
+        public static final int horizontal_veggies=0x7f050062;
+        public static final int hybrid=0x7f050004;
+        public static final int imageNext=0x7f05002c;
+        public static final int imagePrev=0x7f050032;
+        public static final int main_fb=0x7f05006f;
+        public static final int main_gplus=0x7f05006e;
+        public static final int main_order=0x7f05006d;
+        public static final int main_twitter=0x7f05006c;
+        public static final int map=0x7f050005;
+        public static final int none=0x7f050000;
+        public static final int normal=0x7f050001;
+        public static final int order_add_other=0x7f050011;
+        public static final int order_confirmText=0x7f050012;
+        public static final int panic_fb=0x7f050023;
+        public static final int panic_gplus=0x7f050022;
+        public static final int panic_order=0x7f050024;
+        public static final int panic_panic=0x7f050020;
+        public static final int panic_twitter=0x7f050021;
+        public static final int pizza_button=0x7f050008;
+        public static final int pizza_flavor2=0x7f050042;
+        public static final int pizza_flavor2_done=0x7f05004d;
+        public static final int pizza_flavor2_flavor=0x7f050046;
+        public static final int pizza_flavor2_list1=0x7f050047;
+        public static final int pizza_flavor2_list2=0x7f050049;
+        public static final int pizza_flavor2_reset=0x7f05004c;
+        public static final int pizza_flavor2_sauce=0x7f050044;
+        public static final int pizza_flavor2_select=0x7f05004b;
+        public static final int pizza_flavor2_size=0x7f05004a;
+        public static final int pizza_flavor2_toppings=0x7f050045;
+        public static final int pizza_flavor2_veggies=0x7f050043;
+        public static final int pizza_flavor_done=0x7f050041;
+        public static final int pizza_flavor_flavor=0x7f05003c;
+        public static final int pizza_flavor_list=0x7f05003d;
+        public static final int pizza_flavor_reset=0x7f050040;
+        public static final int pizza_flavor_sauce=0x7f05003a;
+        public static final int pizza_flavor_select=0x7f05003f;
+        public static final int pizza_flavor_size=0x7f05003e;
+        public static final int pizza_flavor_toppings=0x7f05003b;
+        public static final int pizza_flavor_veggies=0x7f050039;
+        public static final int pizza_sauce_done=0x7f050057;
+        public static final int pizza_sauce_flavor=0x7f050054;
+        public static final int pizza_sauce_list=0x7f050051;
+        public static final int pizza_sauce_reset=0x7f050056;
+        public static final int pizza_sauce_sauce=0x7f050050;
+        public static final int pizza_sauce_select=0x7f050053;
+        public static final int pizza_sauce_size=0x7f050055;
+        public static final int pizza_sauce_toppings=0x7f050052;
+        public static final int pizza_sauce_veggies=0x7f05004f;
+        public static final int pizza_select_option=0x7f050033;
+        public static final int pizza_size1=0x7f05002d;
+        public static final int pizza_size2=0x7f05002e;
+        public static final int pizza_size3=0x7f05002f;
+        public static final int pizza_size4=0x7f050030;
+        public static final int pizza_size5=0x7f050031;
+        public static final int pizza_size_done=0x7f050037;
+        public static final int pizza_size_flavor=0x7f05002a;
+        public static final int pizza_size_reset=0x7f050036;
+        public static final int pizza_size_sauce=0x7f050027;
+        public static final int pizza_size_select=0x7f050034;
+        public static final int pizza_size_size=0x7f050029;
+        public static final int pizza_size_toppings=0x7f050028;
+        public static final int pizza_size_veggies=0x7f050026;
+        public static final int pizza_toppings_done=0x7f050061;
+        public static final int pizza_toppings_flavor=0x7f05005d;
+        public static final int pizza_toppings_list=0x7f05005c;
+        public static final int pizza_toppings_reset=0x7f050060;
+        public static final int pizza_toppings_sauce=0x7f05005a;
+        public static final int pizza_toppings_select=0x7f05005e;
+        public static final int pizza_toppings_size=0x7f05005f;
+        public static final int pizza_toppings_toppings=0x7f05005b;
+        public static final int pizza_toppings_veggies=0x7f050059;
+        public static final int pizza_veggies_done=0x7f05006b;
+        public static final int pizza_veggies_flavor=0x7f050068;
+        public static final int pizza_veggies_list=0x7f050064;
+        public static final int pizza_veggies_reset=0x7f05006a;
+        public static final int pizza_veggies_sauce=0x7f050065;
+        public static final int pizza_veggies_select=0x7f050066;
+        public static final int pizza_veggies_size=0x7f050069;
+        public static final int pizza_veggies_toppings=0x7f050067;
+        public static final int pizza_veggies_veggies=0x7f050063;
+        public static final int satellite=0x7f050002;
+        public static final int scrollView1=0x7f050006;
+        public static final int select_deals=0x7f050019;
+        public static final int sidelines_button=0x7f05000b;
+        public static final int sidelines_done=0x7f050071;
+        public static final int sidelines_menu=0x7f050070;
+        public static final int sidelines_reset=0x7f050072;
+        public static final int spinner=0x7f050013;
+        public static final int start_pizza_size=0x7f050025;
+        public static final int start_pizza_sizee=0x7f05002b;
+        public static final int sweets_button=0x7f050009;
+        public static final int sweetsomethings_done=0x7f050074;
+        public static final int sweetsomethings_menu=0x7f050073;
+        public static final int sweetsomethings_reset=0x7f050075;
+        public static final int terrain=0x7f050003;
+        public static final int textView1=0x7f050010;
+        public static final int textView2=0x7f050048;
+        public static final int view_flipper=0x7f050014;
     }
     public static final class layout {
-        public static final int activity_category=0x7f030000;
-        public static final int activity_confirm_order=0x7f030001;
-        public static final int activity_deals=0x7f030002;
-        public static final int activity_drinks=0x7f030003;
-        public static final int activity_main=0x7f030004;
-        public static final int activity_order=0x7f030005;
-        public static final int activity_panic=0x7f030006;
-        public static final int activity_pizza=0x7f030007;
-        public static final int activity_pizza_flavor=0x7f030008;
-        public static final int activity_pizza_sauce=0x7f030009;
-        public static final int activity_pizza_toppings=0x7f03000a;
-        public static final int activity_pizza_veggies=0x7f03000b;
-        public static final int activity_regular_order=0x7f03000c;
-        public static final int activity_sidelines=0x7f03000d;
-        public static final int activity_sweetsomethings=0x7f03000e;
-        public static final int hj=0x7f03000f;
-        public static final int in_from_left=0x7f030010;
-        public static final int in_from_right=0x7f030011;
-        public static final int out_to_left=0x7f030012;
-        public static final int out_to_right=0x7f030013;
+        public static final int activity_address=0x7f030000;
+        public static final int activity_category=0x7f030001;
+        public static final int activity_confirm_order=0x7f030002;
+        public static final int activity_deals=0x7f030003;
+        public static final int activity_drinks=0x7f030004;
+        public static final int activity_final_order=0x7f030005;
+        public static final int activity_main=0x7f030006;
+        public static final int activity_panic=0x7f030007;
+        public static final int activity_pizza=0x7f030008;
+        public static final int activity_pizza_flavor=0x7f030009;
+        public static final int activity_pizza_flavor2=0x7f03000a;
+        public static final int activity_pizza_sauce=0x7f03000b;
+        public static final int activity_pizza_toppings=0x7f03000c;
+        public static final int activity_pizza_veggies=0x7f03000d;
+        public static final int activity_regular_order=0x7f03000e;
+        public static final int activity_sidelines=0x7f03000f;
+        public static final int activity_sweetsomethings=0x7f030010;
+        public static final int hj=0x7f030011;
+        public static final int in_from_left=0x7f030012;
+        public static final int in_from_right=0x7f030013;
+        public static final int out_to_left=0x7f030014;
+        public static final int out_to_right=0x7f030015;
     }
     public static final class menu {
-        public static final int category=0x7f070000;
-        public static final int confirm_order=0x7f070001;
-        public static final int deals=0x7f070002;
-        public static final int drinks=0x7f070003;
-        public static final int main=0x7f070004;
-        public static final int order=0x7f070005;
-        public static final int panic=0x7f070006;
-        public static final int pizza=0x7f070007;
-        public static final int pizza_flavor=0x7f070008;
-        public static final int pizza_sauce=0x7f070009;
-        public static final int pizza_toppings=0x7f07000a;
-        public static final int pizza_veggies=0x7f07000b;
-        public static final int regular_order=0x7f07000c;
-        public static final int sidelines=0x7f07000d;
-        public static final int sweetsomethings=0x7f07000e;
+        public static final int address=0x7f090000;
+        public static final int category=0x7f090001;
+        public static final int confirm_order=0x7f090002;
+        public static final int deals=0x7f090003;
+        public static final int drinks=0x7f090004;
+        public static final int final_order=0x7f090005;
+        public static final int main=0x7f090006;
+        public static final int order=0x7f090007;
+        public static final int panic=0x7f090008;
+        public static final int pizza=0x7f090009;
+        public static final int pizza_flavor=0x7f09000a;
+        public static final int pizza_flavor2=0x7f09000b;
+        public static final int pizza_sauce=0x7f09000c;
+        public static final int pizza_toppings=0x7f09000d;
+        public static final int pizza_veggies=0x7f09000e;
+        public static final int quantity=0x7f09000f;
+        public static final int regular_order=0x7f090010;
+        public static final int sidelines=0x7f090011;
+        public static final int sweetsomethings=0x7f090012;
     }
     public static final class string {
-        public static final int action_settings=0x7f050001;
-        public static final int app_name=0x7f050000;
-        public static final int hello_world=0x7f050002;
-        public static final int title_activity_category=0x7f050003;
-        public static final int title_activity_confirm_order=0x7f05000c;
-        public static final int title_activity_deals=0x7f05000d;
-        public static final int title_activity_drinks=0x7f050004;
-        public static final int title_activity_order=0x7f05000f;
-        public static final int title_activity_panic=0x7f05000e;
-        public static final int title_activity_pizza=0x7f050007;
-        public static final int title_activity_pizza_flavor=0x7f050009;
-        public static final int title_activity_pizza_sauce=0x7f05000b;
-        public static final int title_activity_pizza_toppings=0x7f05000a;
-        public static final int title_activity_pizza_veggies=0x7f050008;
-        public static final int title_activity_regular_order=0x7f050010;
-        public static final int title_activity_sidelines=0x7f050005;
-        public static final int title_activity_sweetsomethings=0x7f050006;
+        public static final int action_settings=0x7f06001a;
+        public static final int app_name=0x7f060019;
+        /**   Title for notification shown when GooglePlayServices needs to be
+        enabled for a application to work. [CHAR LIMIT=70] 
+         */
+        public static final int auth_client_needs_enabling_title=0x7f060014;
+        /**   Title for notification shown when GooglePlayServices needs to be
+        installed for a application to work. [CHAR LIMIT=70] 
+         */
+        public static final int auth_client_needs_installation_title=0x7f060015;
+        /**   Title for notification shown when GooglePlayServices needs to be
+        udpated for a application to work. [CHAR LIMIT=70] 
+         */
+        public static final int auth_client_needs_update_title=0x7f060016;
+        /**   Title for notification shown when GooglePlayServices is unavailable [CHAR LIMIT=42] 
+         */
+        public static final int auth_client_play_services_err_notification_msg=0x7f060017;
+        /**   Requested by string saying which app requested the notification. [CHAR LIMIT=42] 
+         */
+        public static final int auth_client_requested_by_msg=0x7f060018;
+        /**   Title for notification shown when a bad version of GooglePlayServices
+        has been installed and needs correction for an application to work.
+        [CHAR LIMIT=70] 
+         */
+        public static final int auth_client_using_bad_version_title=0x7f060013;
+        /**  Button in confirmation dialog to enable Google Play services.  Clicking it
+        will direct user to application settings of Google Play services where they
+        can enable it [CHAR LIMIT=40] 
+         */
+        public static final int common_google_play_services_enable_button=0x7f060006;
+        /**  Message in confirmation dialog informing user they need to enable
+        Google Play services in application settings [CHAR LIMIT=NONE] 
+         */
+        public static final int common_google_play_services_enable_text=0x7f060005;
+        /**  Title of confirmation dialog informing user they need to enable
+        Google Play services in application settings [CHAR LIMIT=40] 
+         */
+        public static final int common_google_play_services_enable_title=0x7f060004;
+        /**  Button in confirmation dialog for installing Google Play services [CHAR LIMIT=40] 
+         */
+        public static final int common_google_play_services_install_button=0x7f060003;
+        /**  (For phones) Message in confirmation dialog informing user that
+        they need to install Google Play services (from Play Store) [CHAR LIMIT=NONE] 
+         */
+        public static final int common_google_play_services_install_text_phone=0x7f060001;
+        /**  (For tablets) Message in confirmation dialog informing user that
+        they need to install Google Play services (from Play Store) [CHAR LIMIT=NONE] 
+         */
+        public static final int common_google_play_services_install_text_tablet=0x7f060002;
+        /**  Title of confirmation dialog informing user that they need to install
+        Google Play services (from Play Store) [CHAR LIMIT=40] 
+         */
+        public static final int common_google_play_services_install_title=0x7f060000;
+        /**  Message in confirmation dialog informing the user that they provided an invalid account. [CHAR LIMIT=NONE] 
+         */
+        public static final int common_google_play_services_invalid_account_text=0x7f06000c;
+        /**  Title of confirmation dialog informing the user that they provided an invalid account. [CHAR LIMIT=40] 
+         */
+        public static final int common_google_play_services_invalid_account_title=0x7f06000b;
+        /**  Message in confirmation dialog informing the user that a network error occurred. [CHAR LIMIT=NONE] 
+         */
+        public static final int common_google_play_services_network_error_text=0x7f06000a;
+        /**  Title of confirmation dialog informing the user that a network error occurred. [CHAR LIMIT=40] 
+         */
+        public static final int common_google_play_services_network_error_title=0x7f060009;
+        /**  Message in confirmation dialog informing user there is an unknown issue in Google Play
+        services [CHAR LIMIT=NONE] 
+         */
+        public static final int common_google_play_services_unknown_issue=0x7f06000d;
+        /**  Message in confirmation dialog informing user that Google Play services is not supported on their device [CHAR LIMIT=NONE] 
+         */
+        public static final int common_google_play_services_unsupported_text=0x7f06000f;
+        /**  Title of confirmation dialog informing user that Google Play services is not supported on their device [CHAR LIMIT=40] 
+         */
+        public static final int common_google_play_services_unsupported_title=0x7f06000e;
+        /**  Button in confirmation dialog for updating Google Play services [CHAR LIMIT=40] 
+         */
+        public static final int common_google_play_services_update_button=0x7f060010;
+        /**  Message in confirmation dialog informing user that they need to update
+        Google Play services (from Play Store) [CHAR LIMIT=NONE] 
+         */
+        public static final int common_google_play_services_update_text=0x7f060008;
+        /**  Title of confirmation dialog informing user that they need to update
+        Google Play services (from Play Store) [CHAR LIMIT=40] 
+         */
+        public static final int common_google_play_services_update_title=0x7f060007;
+        /**  Sign-in button text [CHAR LIMIT=15] 
+         */
+        public static final int common_signin_button_text=0x7f060011;
+        /**  Long form sign-in button text [CHAR LIMIT=30] 
+         */
+        public static final int common_signin_button_text_long=0x7f060012;
+        public static final int hello_world=0x7f06001b;
+        public static final int title_activity_address=0x7f06002c;
+        public static final int title_activity_category=0x7f06001c;
+        public static final int title_activity_confirm_order=0x7f060025;
+        public static final int title_activity_deals=0x7f060026;
+        public static final int title_activity_drinks=0x7f06001d;
+        public static final int title_activity_final_order=0x7f06002d;
+        public static final int title_activity_order=0x7f060028;
+        public static final int title_activity_panic=0x7f060027;
+        public static final int title_activity_pizza=0x7f060020;
+        public static final int title_activity_pizza_flavor=0x7f060022;
+        public static final int title_activity_pizza_flavor2=0x7f06002a;
+        public static final int title_activity_pizza_sauce=0x7f060024;
+        public static final int title_activity_pizza_toppings=0x7f060023;
+        public static final int title_activity_pizza_veggies=0x7f060021;
+        public static final int title_activity_quantity=0x7f06002b;
+        public static final int title_activity_regular_order=0x7f060029;
+        public static final int title_activity_sidelines=0x7f06001e;
+        public static final int title_activity_sweetsomethings=0x7f06001f;
     }
     public static final class style {
         /** 
@@ -253,10 +607,256 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f080000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
+        public static final int AppTheme=0x7f080001;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a MapAttrs.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #MapAttrs_cameraBearing com.example.newpizza:cameraBearing}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTargetLat com.example.newpizza:cameraTargetLat}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTargetLng com.example.newpizza:cameraTargetLng}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTilt com.example.newpizza:cameraTilt}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraZoom com.example.newpizza:cameraZoom}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_mapType com.example.newpizza:mapType}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiCompass com.example.newpizza:uiCompass}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiRotateGestures com.example.newpizza:uiRotateGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiScrollGestures com.example.newpizza:uiScrollGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiTiltGestures com.example.newpizza:uiTiltGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiZoomControls com.example.newpizza:uiZoomControls}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiZoomGestures com.example.newpizza:uiZoomGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_useViewLifecycle com.example.newpizza:useViewLifecycle}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_zOrderOnTop com.example.newpizza:zOrderOnTop}</code></td><td></td></tr>
+           </table>
+           @see #MapAttrs_cameraBearing
+           @see #MapAttrs_cameraTargetLat
+           @see #MapAttrs_cameraTargetLng
+           @see #MapAttrs_cameraTilt
+           @see #MapAttrs_cameraZoom
+           @see #MapAttrs_mapType
+           @see #MapAttrs_uiCompass
+           @see #MapAttrs_uiRotateGestures
+           @see #MapAttrs_uiScrollGestures
+           @see #MapAttrs_uiTiltGestures
+           @see #MapAttrs_uiZoomControls
+           @see #MapAttrs_uiZoomGestures
+           @see #MapAttrs_useViewLifecycle
+           @see #MapAttrs_zOrderOnTop
+         */
+        public static final int[] MapAttrs = {
+            0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
+            0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007,
+            0x7f010008, 0x7f010009, 0x7f01000a, 0x7f01000b,
+            0x7f01000c, 0x7f01000d
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.example.newpizza.R.attr#cameraBearing}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:cameraBearing
+        */
+        public static final int MapAttrs_cameraBearing = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.example.newpizza.R.attr#cameraTargetLat}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:cameraTargetLat
+        */
+        public static final int MapAttrs_cameraTargetLat = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.example.newpizza.R.attr#cameraTargetLng}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:cameraTargetLng
+        */
+        public static final int MapAttrs_cameraTargetLng = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.example.newpizza.R.attr#cameraTilt}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:cameraTilt
+        */
+        public static final int MapAttrs_cameraTilt = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.example.newpizza.R.attr#cameraZoom}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:cameraZoom
+        */
+        public static final int MapAttrs_cameraZoom = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.example.newpizza.R.attr#mapType}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>none</code></td><td>0</td><td></td></tr>
+<tr><td><code>normal</code></td><td>1</td><td></td></tr>
+<tr><td><code>satellite</code></td><td>2</td><td></td></tr>
+<tr><td><code>terrain</code></td><td>3</td><td></td></tr>
+<tr><td><code>hybrid</code></td><td>4</td><td></td></tr>
+</table>
+          @attr name android:mapType
+        */
+        public static final int MapAttrs_mapType = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.example.newpizza.R.attr#uiCompass}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:uiCompass
+        */
+        public static final int MapAttrs_uiCompass = 6;
+        /**
+          <p>This symbol is the offset where the {@link com.example.newpizza.R.attr#uiRotateGestures}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:uiRotateGestures
+        */
+        public static final int MapAttrs_uiRotateGestures = 7;
+        /**
+          <p>This symbol is the offset where the {@link com.example.newpizza.R.attr#uiScrollGestures}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:uiScrollGestures
+        */
+        public static final int MapAttrs_uiScrollGestures = 8;
+        /**
+          <p>This symbol is the offset where the {@link com.example.newpizza.R.attr#uiTiltGestures}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:uiTiltGestures
+        */
+        public static final int MapAttrs_uiTiltGestures = 9;
+        /**
+          <p>This symbol is the offset where the {@link com.example.newpizza.R.attr#uiZoomControls}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:uiZoomControls
+        */
+        public static final int MapAttrs_uiZoomControls = 10;
+        /**
+          <p>This symbol is the offset where the {@link com.example.newpizza.R.attr#uiZoomGestures}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:uiZoomGestures
+        */
+        public static final int MapAttrs_uiZoomGestures = 11;
+        /**
+          <p>This symbol is the offset where the {@link com.example.newpizza.R.attr#useViewLifecycle}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:useViewLifecycle
+        */
+        public static final int MapAttrs_useViewLifecycle = 12;
+        /**
+          <p>This symbol is the offset where the {@link com.example.newpizza.R.attr#zOrderOnTop}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:zOrderOnTop
+        */
+        public static final int MapAttrs_zOrderOnTop = 13;
+    };
 }

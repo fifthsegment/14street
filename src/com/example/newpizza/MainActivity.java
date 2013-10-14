@@ -27,6 +27,11 @@ public class MainActivity extends Activity {
 		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+
+	    if( getIntent().getBooleanExtra("Exit me", false)){
+	        finish();
+	        return; // add this to prevent from doing unnecessary stuffs
+	    }
 		Thread timedelay=new Thread(){
 			public void run(){
 				try{
@@ -41,7 +46,7 @@ public class MainActivity extends Activity {
 					else
 					{
 
-						Intent intent=new Intent(MainActivity.this,Category.class);
+						Intent intent=new Intent(MainActivity.this,Regular_order.class);
 						startActivity(intent);
 					}
 				}
@@ -65,17 +70,24 @@ public class MainActivity extends Activity {
         
 	  try {
 		 
-          InputStream inputStream = openFileInput("abc.txt");
+          InputStream inputStream = openFileInput("pizza_book.txt");
            
           if ( inputStream != null) {
               InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
               BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-           
+              String a=" ";
               StringBuilder stringBuilder = new StringBuilder();
                
               while ( (receiveString = bufferedReader.readLine() )!= null) {
-            	  order.last_order=receiveString;
-            	  order.no_of_orders++;
+            	  a= a+receiveString+"\n";
+            	  
+            	  if(receiveString.contains(">"))
+            	  {
+            		  order.no_of_orders++;
+            		  order.last_order=a;
+            		  a=" ";
+            	  }
+            	  
               }
               
               inputStream.close();

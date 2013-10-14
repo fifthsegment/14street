@@ -25,7 +25,7 @@ public class Panic extends Activity {
 		setContentView(R.layout.activity_panic);
 		ImageView fb= (ImageView) findViewById(R.id.panic_fb);
 		ImageView twitter= (ImageView) findViewById(R.id.panic_twitter);
-		ImageView gplus= (ImageView) findViewById(R.id.panic_twitter);
+		ImageView gplus= (ImageView) findViewById(R.id.panic_gplus);
 		ImageView order= (ImageView) findViewById(R.id.panic_order);
 		ImageView panic= (ImageView) findViewById(R.id.panic_panic);
 		
@@ -59,7 +59,8 @@ public class Panic extends Activity {
 		    public void onClick(View v) {
 		        //Inform the user the button has been clicked
 		    	com.newPizza.order.order.full_order=com.newPizza.order.order.last_order;
-		    	Intent intent_size=new Intent(Panic.this, Confirm_order.class);
+		    	com.newPizza.order.order.x++;
+		    	Intent intent_size=new Intent(Panic.this, Final_order.class);
 		        startActivity(intent_size);
 		  
 		    	 

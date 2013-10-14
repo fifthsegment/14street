@@ -5,7 +5,9 @@ import java.util.ArrayList;
 import com.newPizza.order.order;
 
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.util.SparseBooleanArray;
 import android.view.Menu;
@@ -63,13 +65,13 @@ public class Sidelines extends Activity {
     		        	if(i==0)
     		        		a=selectedItems.get(i);
     		        	else
-    		        		a = a.concat(","+selectedItems.get(i));
+    		        		a = a.concat("\n"+selectedItems.get(i));
     		        }
 		        
 		        if(order.sidelines_order==" ")
 			    	   order.sidelines_order=order.sidelines_order.concat(a);
 			       else
-			    	   order.sidelines_order=order.sidelines_order.concat(","+a);				    	
+			    	   order.sidelines_order=order.sidelines_order.concat("\n"+a);				    	
 		    	Intent intent_confirm=new Intent(Sidelines.this, Confirm_order.class);
 		        startActivity(intent_confirm);
 		    }
@@ -79,10 +81,11 @@ public class Sidelines extends Activity {
 			@Override
 		    public void onClick(View v) {
 
-			    
-			        //Inform the user the button has been clicked
-			    	Intent home=new Intent(Sidelines.this, Sidelines.class);
-			        startActivity(home);
+				order.sidelines_order=" ";
+				Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE) ;
+				vibe.vibrate(50);
+				Intent home=new Intent(Sidelines.this, Category.class);
+		        startActivity(home);
 			}
 			    			    
 	});
@@ -97,6 +100,9 @@ public class Sidelines extends Activity {
 		}
 		@Override
 		public void onBackPressed() {
+			order.sidelines_order=" ";
+			Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE) ;
+			vibe.vibrate(50);
 			Intent home=new Intent(Sidelines.this, Category.class);
 	        startActivity(home);
 		}

@@ -11,16 +11,25 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Confirm_order extends Activity {
+public class Confirm_order extends Activity  implements
+AdapterView.OnItemSelectedListener {
+String selection;
+String[] items = { "1", "2", "3", "4", 
+	"5", "6",
+	"7", "8", "9", "10" };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -29,22 +38,45 @@ public class Confirm_order extends Activity {
 
 				//Remove notification bar
 				this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+				//if(com.newPizza.order.order.x==0)
+					//	order.full_order= "PIZZA\n"+order.pizza+"\nSIDELINES\n"+order.sidelines_order+"\nDRINKS\n"+order.drinks_order+"\nSWEETSOMETHINGS\n"+order.sweetsomething_order+"\nDEALS\n"+order.deals_order;
 
-				order.full_order= "PIZZA: "+order.pizza+",SIDELINES: "+order.sidelines_order+",DRINKS: "+order.drinks_order+"SWEETSOMETHINGS: "+order.sweetsomething_order+"DEALS: "+order.deals_order;
-				
-
-				order.pizza_size=" ";
-				order.pizza_toppings=" ";
-				order.pizza_veggies=" ";
-				order.pizza_flavor=" ";
-				order.pizza_sauce=" ";
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_confirm_order);
 		
+		//selection = (TextView) findViewById(R.id.textView1);
+
+		Spinner spin = (Spinner) findViewById(R.id.spinner);
+		spin.setOnItemSelectedListener(this);
+
+		ArrayAdapter aa = new ArrayAdapter(
+				this,
+				android.R.layout.simple_spinner_item, 
+				items);
+
+		aa.setDropDownViewResource(
+		   android.R.layout.simple_spinner_dropdown_item);
+		spin.setAdapter(aa);
+
+		
+		
 		Button confirm=(Button) findViewById(R.id.order_confirmText);
 		Button add_itmes=(Button) findViewById(R.id.order_add_other);
-		TextView txt=(TextView) findViewById(R.id.display_order_view);
-		txt.setText(order.full_order);
+		final TextView txt=(TextView) findViewById(R.id.display_order_view);
+		txt.setMovementMethod(new ScrollingMovementMethod());
+
+
+		if(order.pizza!=" ")
+			txt.setText(order.pizza);
+		else if(order.sidelines_order!=" ")
+			txt.setText(order.sidelines_order);
+		else if(order.drinks_order!=" ")
+			txt.setText(order.drinks_order);
+		else if(order.sweetsomething_order!=" ")
+			txt.setText(order.sweetsomething_order);
+		else if(order.deals_order!=" ")
+			txt.setText(order.deals_order);
+
 		/*confirm.setOnClickListener( new View.OnClickListener() {
 		    @Override
 		    public void onClick(View v) {
@@ -53,76 +85,96 @@ public class Confirm_order extends Activity {
 		        startActivity(intent_sidelines);
 		    }
 		});*/
+		
 		add_itmes.setOnClickListener( new View.OnClickListener() {
 		    @Override
 		    public void onClick(View v) {
 		        //Inform the user the button has been clicked
+		    	if(order.pizza!=" ")
+		    	{
+
+					order.pizza=order.pizza+"   x"+selection+"\n";
+					
+		    	}
+				else if(order.sidelines_order!=" ")
+				{
+		    		if(order.sidelines_order.contains("\n"))
+		    			order.sidelines_order=order.sidelines_order+"   x"+selection+" each\n";
+
+		    		else
+		    			order.sidelines_order=order.sidelines_order+"   x"+selection+"\n";
+				}
+				else if(order.drinks_order!=" ")
+				{
+					if(order.drinks_order.contains("\n"))
+						order.drinks_order=order.drinks_order+"   x"+selection+" each\n";
+					else
+						order.drinks_order=order.drinks_order+"   x"+selection+"\n";
+				}
+				else if(order.sweetsomething_order!=" ")
+				{
+					if(order.sweetsomething_order.contains("\n"))
+						order.sweetsomething_order=order.sweetsomething_order+"   x"+selection+" each\n";
+					else
+						order.sweetsomething_order=order.sweetsomething_order+"   x"+selection+"\n";
+				}
+				else if(order.deals_order!=" ")
+				{
+					if(order.deals_order.contains("\n"))
+						order.deals_order=order.deals_order+"   x"+selection+" each\n";
+
+					else
+						order.deals_order=order.deals_order+"   x"+selection+"\n";
+				}
+
 		    	Intent intent_sidelines=new Intent(Confirm_order.this, Category.class);
 		        startActivity(intent_sidelines);
 		    }
 		});
-    	final AlertDialog.Builder message = new AlertDialog.Builder(this);
 
 		confirm.setOnClickListener( new View.OnClickListener() {
 		    @Override
 		    public void onClick(View v) {
 		    	
-		    	
-		    	writeToFile(order.full_order);
-		    	if(order.no_of_orders>=7)
+		    	if(order.pizza!=" ")
 		    	{
-		    		Intent i = new Intent(Intent.ACTION_SEND);
-			    	i.setType("message/rfc822");
-			    	i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"11besemidrees@gmail.com@gmail.com"});
-			    	i.putExtra(Intent.EXTRA_SUBJECT, "14th street Urgent order by panic");
-			    	i.putExtra(Intent.EXTRA_TEXT   , order.full_order);
-			    	try {
-			    	    startActivity(Intent.createChooser(i, "Send mail..."));
-			    	} catch (android.content.ActivityNotFoundException ex) {
-			    	    Toast.makeText(Confirm_order.this, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
-			    	}
+
+					order.pizza=order.pizza+"   x"+selection+"\n";
+					
 		    	}
-		    	else{
-		    	Intent i = new Intent(Intent.ACTION_SEND);
-		    	i.setType("message/rfc822");
-		    	i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"mujtabaidrees@gmail.com"});
-		    	i.putExtra(Intent.EXTRA_SUBJECT, "14th street normal order");
-		    	i.putExtra(Intent.EXTRA_TEXT   , order.full_order);
-		    	try {
-		    	    startActivity(Intent.createChooser(i, "Send mail..."));
-		    	} catch (android.content.ActivityNotFoundException ex) {
-		    	    Toast.makeText(Confirm_order.this, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
-		    	}
-		    	}
-		    	order.full_order=" ";
-		    	order.pizza_size=" ";
-		    	order.drinks_order=" ";
-		    	order.sidelines_order=" ";
-		    	order.sweetsomething_order=" ";
-		    	order.deals_order=" ";
-		    	order.full_order=" ";
-		    	order.pizza_toppings=" ";
-		    	order.pizza_veggies=" ";
-		    	order.pizza_flavor=" ";
-		    	order.pizza_sauce=" ";
-		    	order.pizza=" ";
-		    	//order.last_order="";
-		    	
-		    	message.setMessage("Your Order has been dispatched").setTitle("Thanks For Choosing 14th Street Pizza")
-		            .setCancelable(true)
-		            .setNeutralButton(android.R.string.ok,
-		               new DialogInterface.OnClickListener() {
-		               public void onClick(DialogInterface dialog, int whichButton){
-		            	   Intent intent_flavor=new Intent(Confirm_order.this, Category.class);
-		   		        startActivity(intent_flavor);
-		               }
-		               })
-		            .show();
-		          
-		        //Inform the user the button has been clicked
-		    	/*
-		    	Intent intent_sidelines=new Intent(Confirm_order.this, Category.class);
-		        startActivity(intent_sidelines);*/
+				else if(order.sidelines_order!=" ")
+				{
+		    		if(order.sidelines_order.contains("\n"))
+		    			order.sidelines_order=order.sidelines_order+"   x"+selection+" each\n";
+
+		    		else
+		    			order.sidelines_order=order.sidelines_order+"   x"+selection+"\n";
+				}
+				else if(order.drinks_order!=" ")
+				{
+					if(order.drinks_order.contains("\n"))
+						order.drinks_order=order.drinks_order+"   x"+selection+" each\n";
+					else
+						order.drinks_order=order.drinks_order+"   x"+selection+"\n";
+				}
+				else if(order.sweetsomething_order!=" ")
+				{
+					if(order.sweetsomething_order.contains("\n"))
+						order.sweetsomething_order=order.sweetsomething_order+"   x"+selection+" each\n";
+					else
+						order.sweetsomething_order=order.sweetsomething_order+"   x"+selection+"\n";
+				}
+				else if(order.deals_order!=" ")
+				{
+					if(order.deals_order.contains("\n"))
+						order.deals_order=order.deals_order+"   x"+selection+" each\n";
+
+					else
+						order.deals_order=order.deals_order+"   x"+selection+"\n";
+				}
+		    	Intent intent_sidelines=new Intent(Confirm_order.this, Final_order.class);
+		        startActivity(intent_sidelines);
+		    
 		    }
 		});
 		
@@ -139,24 +191,19 @@ public class Confirm_order extends Activity {
 		Intent home=new Intent(Confirm_order.this, Category.class);
         startActivity(home);
 	}
-	 public void writeToFile(String content) {
-	        
-		 try {
 
+	@Override
+	public void onItemSelected(AdapterView<?> arg0, View arg1, int position,
+			long arg3) {
 
-	        	String separator = System.getProperty("line.separator");
-	        	OutputStreamWriter outputStreamWriter = new OutputStreamWriter(openFileOutput("abc.txt", Context.MODE_APPEND));
-	        	
-	        	outputStreamWriter.write(order.full_order);
-	        	outputStreamWriter.append(separator); // this will add new line ;
-	        
-	            outputStreamWriter.close();
-	            	        }
-	        catch (IOException e) {
-	            Log.e("error:", "File write failed: " + e.toString());
-	        } 
+		selection=items[position];
+	}
 
-}
+	@Override
+	public void onNothingSelected(AdapterView<?> arg0) {
+
+		
+	}
 	 
 
 

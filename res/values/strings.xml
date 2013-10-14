@@ -18,5 +18,9 @@
     <string name="title_activity_panic">Panic</string>
     <string name="title_activity_order">Order</string>
     <string name="title_activity_regular_order">Regular_order</string>
+    <string name="title_activity_pizza_flavor2">Pizza_flavor2</string>
+    <string name="title_activity_quantity">Quantity</string>
+    <string name="title_activity_address">Address</string>
+    <string name="title_activity_final_order">Final_order</string>
 
 </resources>

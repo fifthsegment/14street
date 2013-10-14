@@ -1,5 +1,6 @@
 package com.example.newpizza;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -20,15 +21,17 @@ public class Regular_order extends Activity {
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_regular_order);
-		ImageView fb= (ImageView) findViewById(R.id.panic_fb);
 		ImageView twitter= (ImageView) findViewById(R.id.main_twitter);
 		ImageView gplus= (ImageView) findViewById(R.id.main_gplus);
 		ImageView order= (ImageView) findViewById(R.id.main_order);
-		
+		ImageView fb= (ImageView) findViewById(R.id.main_fb);
+
 		fb.setOnClickListener( new View.OnClickListener() {
 		    @Override
 		    public void onClick(View v) {
 		        //Inform the user the button has been clicked
+		    	Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/14thstreetpizza"));
+		    	startActivity(browserIntent);
 		    }
 		}); 
 
@@ -36,14 +39,17 @@ public class Regular_order extends Activity {
 		    @Override
 		    public void onClick(View v) {
 		        //Inform the user the button has been clicked
-		    	
+		    	Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/14thstreetpizza"));
+		    	startActivity(browserIntent);
+
 		    }
 		}); 
    		gplus.setOnClickListener( new View.OnClickListener() {
 		    @Override
 		    public void onClick(View v) {
 		        //Inform the user the button has been clicked
-		    
+		    	Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://plus.google.com/104180590689524206732/about"));
+		    	startActivity(browserIntent);
 		    }
 		}); 
    	 

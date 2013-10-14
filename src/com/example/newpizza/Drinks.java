@@ -10,7 +10,9 @@ import java.util.ArrayList;
 import com.newPizza.order.order;
 
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.util.SparseBooleanArray;
 import android.view.Menu;
@@ -69,12 +71,12 @@ public class Drinks extends Activity {
     		        	if(i==0)
     		        		a=selectedItems.get(i);
     		        	else
-    		        		a = a.concat(","+selectedItems.get(i));
+    		        		a = a.concat("\n"+selectedItems.get(i));
     		        }
 		        if(order.drinks_order==" ")
 			    	   order.drinks_order=order.drinks_order.concat(a);
 			       else
-			    	   order.drinks_order=order.drinks_order.concat(","+a);		    	
+			    	   order.drinks_order=order.drinks_order.concat("\n"+a);		    	
 		    	Intent intent_confirm=new Intent(Drinks.this, Confirm_order.class);
 		        startActivity(intent_confirm);
 		    }
@@ -84,7 +86,11 @@ public class Drinks extends Activity {
 		    @Override
 		    public void onClick(View v) {
 		        //Inform the user the button has been clicked
-		    	Intent home=new Intent(Drinks.this, Drinks.class);
+		    	order.drinks_order=" ";
+				
+		    	Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE) ;
+				vibe.vibrate(50);
+				Intent home=new Intent(Drinks.this, Category.class);
 		        startActivity(home);
 		    			    }
 		}); 
@@ -101,6 +107,10 @@ public class Drinks extends Activity {
 
 	@Override
 	public void onBackPressed() {
+		order.drinks_order=" ";
+		
+    	Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE) ;
+		vibe.vibrate(50);
 		Intent home=new Intent(Drinks.this, Category.class);
         startActivity(home);
 	}

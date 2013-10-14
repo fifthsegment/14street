@@ -3,6 +3,7 @@ import com.newPizza.*;
 import com.newPizza.order.order;
 
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -14,6 +15,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ViewFlipper;
 
 public class Pizza extends Activity 
@@ -24,6 +26,7 @@ public class Pizza extends Activity
         	int count=1;
         	int chk=1;
        		int x=0;
+       		int half_flavor=0;
 
             @Override
             protected void onCreate(Bundle savedInstanceState) 
@@ -44,9 +47,14 @@ public class Pizza extends Activity
        		Button select_reset=(Button) findViewById(R.id.pizza_size_reset);
        		Button select_done=(Button) findViewById(R.id.pizza_size_done);
        		Button select_selectBtn=(Button) findViewById(R.id.pizza_size_select);
+
+       		ImageView select_Next= (ImageView) findViewById(R.id.imageNext);
+       		ImageView select_Prev= (ImageView) findViewById(R.id.imagePrev);
+
     		if(order.pizza_size!=" ")
     			x++;
-       		select_veggies.setOnClickListener( new View.OnClickListener() {
+    		
+    		select_veggies.setOnClickListener( new View.OnClickListener() {
     		    @Override
     		    public void onClick(View v) {
     		        //Inform the user the button has been clicked
@@ -54,7 +62,59 @@ public class Pizza extends Activity
     		        startActivity(intent_drinks);
     		    }
     		}); 
+       		select_Next.setOnClickListener( new View.OnClickListener() {
+    		    @Override
+    		    public void onClick(View v) {
+    		        //Inform the user the button has been clicked
+                     // Show The Previous Screen
+    		    	 
+                           // If no more View/Child to flip
 
+   		    	 if (viewFlipper.getDisplayedChild() == 1);
+   		    	 else{
+                        
+                    // set the required Animation type to ViewFlipper
+                    // The Next screen will come in form Right and current Screen will go OUT from Left 
+                    left_right();
+                    // Show The Previous Screen
+                    
+                   	 count++;
+                     viewFlipper.showPrevious();
+
+   		    	 }
+                    
+   		    	
+   		   
+   		    }                               
+  
+                     
+    		    
+    		}); 
+       		select_Prev.setOnClickListener( new View.OnClickListener() {
+    		    @Override
+    		    public void onClick(View v) {
+    		        //Inform the user the button has been clicked
+                    // Show the next Screen
+    		    	  if (viewFlipper.getDisplayedChild() == 0);
+                      else{
+                      
+                      // set the required Animation type to ViewFlipper
+                      // The Next screen will come in form Left and current Screen will go OUT from Right 
+                      right_left();
+                      // Show the next Screen
+                     
+                     if(count>1)
+                      {
+                     	 count--;
+                     	 
+                      }
+                      viewFlipper.showNext();
+
+                      }
+    		    }    
+    		}); 
+
+       		
        		select_sauce.setOnClickListener( new View.OnClickListener() {
     		    @Override
     		    public void onClick(View v) {
@@ -91,7 +151,8 @@ public class Pizza extends Activity
        		select_reset.setOnClickListener( new View.OnClickListener() {
     		    @Override
     		    public void onClick(View v) {
-    		    	
+    		    	Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE) ;
+    				vibe.vibrate(50);
 
     		        builder.setTitle("Confirm");
     		        builder.setMessage("Are you sure?");
@@ -105,8 +166,9 @@ public class Pizza extends Activity
     						order.pizza_toppings=" ";
     						order.pizza_veggies=" ";
     						order.pizza_flavor=" ";
+    						order.pizza_flavor2=" ";
     						order.pizza_sauce=" ";
-        		           	Intent intent_drinks=new Intent(Pizza.this, Pizza.class);
+        		           	Intent intent_drinks=new Intent(Pizza.this, Category.class);
         		        startActivity(intent_drinks);
 
     		                dialog.dismiss();
@@ -147,11 +209,14 @@ public class Pizza extends Activity
     		    	case 3:
     		    	{
     		    		order.pizza_size="Split-Half";
+    		    		half_flavor++;
     		    	break;
     		    	}
     		    	case 4:
     		    	{
     		    		order.pizza_size="Half&Half";
+    		    		half_flavor++;
+
     		    	break;
     		    	}
     		    	case 5:
@@ -161,10 +226,11 @@ public class Pizza extends Activity
     		    		}
     		    	}
 
-    		    	if(x>0)
+    		    	if(half_flavor>0)
     		    	{
-    		    		finish();
 
+        		    	Intent intent_pizza=new Intent(Pizza.this, Pizza_flavor2.class);
+        		        startActivity(intent_pizza);
     		    	}
     		    	else{
     		    	Intent intent_pizza=new Intent(Pizza.this, Pizza_flavor.class);
@@ -194,11 +260,14 @@ public class Pizza extends Activity
     		    	case 3:
     		    	{
     		    		order.pizza_size="Split-Half";
+    		    		half_flavor++;
     		    	break;
     		    	}
     		    	case 4:
     		    	{
     		    		order.pizza_size="Half&Half";
+    		    		half_flavor++;
+
     		    	break;
     		    	}
     		    	case 5:
@@ -208,23 +277,40 @@ public class Pizza extends Activity
     		    		}
     		    	}
 
-    		    	//order.full_order=order.full_order.concat(order.pizza_order);
-    		    	if(x>0)
+    		    	if(half_flavor>0)
     		    	{
-    		    		finish();
+
+        		    	Intent intent_pizza=new Intent(Pizza.this, Pizza_flavor2.class);
+        		        startActivity(intent_pizza);
     		    	}
     		    	else{
     		    	Intent intent_pizza=new Intent(Pizza.this, Pizza_flavor.class);
     		        startActivity(intent_pizza);
     		    	}
-    		    }
-    		}); 
+    		        
+    		    }    	
+    		    }); 
             }
 
             
-                        
+
+		public void left_right()
+		{
+			 viewFlipper.setInAnimation(this, R.layout.in_from_left);
+             viewFlipper.setOutAnimation(this, R.layout.out_to_right);
+            
+			}
+
+		public void right_left()
+		{
+			viewFlipper.setInAnimation(this, R.layout.in_from_right);
+            viewFlipper.setOutAnimation(this, R.layout.out_to_left);
+            
+			}
+
+
             // Method to handle touch event like left to right swap and right to left swap
-            public boolean onTouchEvent(MotionEvent touchevent) 
+          /*  public boolean onTouchEvent(MotionEvent touchevent) 
             {
                          switch (touchevent.getAction())
                          {
@@ -279,12 +365,20 @@ public class Pizza extends Activity
                                  }
                          }
                          return false;
-            }
+            }*/
             @Override
         	public void onBackPressed() {
+
+				order.pizza_size=" ";
+				order.pizza_toppings=" ";
+				order.pizza_veggies=" ";
+				order.pizza_flavor=" ";
+				order.pizza_flavor2=" ";
+				order.pizza_sauce=" ";
+            	Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE) ;
+        		vibe.vibrate(50);
         		Intent home=new Intent(Pizza.this, Category.class);
                 startActivity(home);
         	}
 
  }
-

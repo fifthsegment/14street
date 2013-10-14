@@ -22,9 +22,12 @@ public class order {
 	static public String pizza_toppings=" ";
 	static public String pizza_veggies=" ";
 	static public String pizza_flavor=" ";
+	static public String pizza_flavor2=" ";
+
 	static public String pizza_sauce=" ";
 	static public String pizza=" ";
 	static public String last_order="";
 	static public int no_of_orders=0;
+	static public int x=0;
 
 }

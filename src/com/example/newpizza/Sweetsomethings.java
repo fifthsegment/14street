@@ -5,8 +5,10 @@ import java.util.ArrayList;
 import com.newPizza.order.order;
 
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.util.SparseBooleanArray;
 import android.view.Menu;
@@ -61,12 +63,12 @@ public class Sweetsomethings extends Activity {
     		        	if(i==0)
     		        		a=selectedItems.get(i);
     		        	else
-    		        		a = a.concat(","+selectedItems.get(i));
+    		        		a = a.concat("\n"+selectedItems.get(i));
     		        }
 		       if(order.sweetsomething_order==" ")
 		    	   order.sweetsomething_order=order.sweetsomething_order.concat(a);
 		       else
-		    	   order.sweetsomething_order=order.sweetsomething_order.concat(","+a);
+		    	   order.sweetsomething_order=order.sweetsomething_order.concat("\n"+a);
 
 		    	   
 
@@ -82,9 +84,12 @@ public class Sweetsomethings extends Activity {
 		    @Override
 		    public void onClick(View v) {
 		        //Inform the user the button has been clicked
-		    	Intent home=new Intent(Sweetsomethings.this, Sweetsomethings.class);
-		        startActivity(home);
-		    			    }
+		    	
+		    	order.sweetsomething_order=" ";
+				Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE) ;
+				vibe.vibrate(50);
+				Intent home=new Intent(Sweetsomethings.this, Category.class);
+		        startActivity(home);		    }
 		}); 
 
 		
@@ -98,6 +103,9 @@ public class Sweetsomethings extends Activity {
 	}
 	@Override
 	public void onBackPressed() {
+		order.sweetsomething_order=" ";
+		Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE) ;
+		vibe.vibrate(50);
 		Intent home=new Intent(Sweetsomethings.this, Category.class);
         startActivity(home);
 	}

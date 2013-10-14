@@ -10,13 +10,13 @@
     <RelativeLayout
         android:id="@+id/horizontal_toppings"
         android:layout_width="wrap_content"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_weight="0.36" >
 
         <Button
              android:id="@+id/pizza_toppings_veggies"
             android:layout_width="wrap_content"
-            android:layout_height="45dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
@@ -25,7 +25,7 @@
         <Button
             android:id="@+id/pizza_toppings_sauce"
             android:layout_width="wrap_content"
-            android:layout_height="45dp"
+            android:layout_height="wrap_content"
 			android:layout_alignParentLeft="true"
             android:layout_alignParentRight="true"
             
@@ -35,7 +35,7 @@
 		<Button
 		    android:id="@+id/pizza_toppings_toppings"
 		    android:layout_width="wrap_content"
-            android:layout_height="45dp"
+            android:layout_height="wrap_content"
 		    android:layout_below="@+id/pizza_toppings_sauce"
 		    
 		 
@@ -59,11 +59,13 @@
     <RelativeLayout
         android:id="@+id/pizza_select_option"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >    
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+    
 		<Button
 		    android:id="@+id/pizza_toppings_flavor"
 		    android:layout_width="wrap_content"
-            android:layout_height="45dp"
+            android:layout_height="wrap_content"
 		    android:layout_alignParentLeft="true"
             android:layout_alignParentRight="true"
             android:layout_below="@+id/pizza_toppings_select"
@@ -72,22 +74,22 @@
 		<Button
 		    android:id="@+id/pizza_toppings_size"
 		    android:layout_width="wrap_content"
-            android:layout_height="45dp"
+            android:layout_height="wrap_content"
 		    android:layout_alignParentLeft="true"
 		    android:layout_below="@+id/pizza_toppings_flavor"
 		   
             android:layout_alignParentRight="true"
           
-		    android:background="@drawable/pizza_size_bt" />
+		    android:background="@drawable/pizza_size_bt"
+		     />
 
 		<Button
 		    android:id="@+id/pizza_toppings_select"
 		    android:layout_width="wrap_content"
-		    android:layout_height="40dp"
-		    android:layout_alignParentRight="true"
+		    android:layout_height="wrap_content"
 		    android:layout_alignParentTop="true"
-		    android:layout_marginRight="14dp"
-		    android:text="Select" />
+		    android:layout_centerHorizontal="true"
+		    android:background="@drawable/slct" />
        
          </RelativeLayout>
 

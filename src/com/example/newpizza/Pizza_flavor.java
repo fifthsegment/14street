@@ -6,8 +6,10 @@ import java.util.ArrayList;
 import com.newPizza.order.order;
 
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.util.SparseBooleanArray;
@@ -101,7 +103,15 @@ public class Pizza_flavor extends Activity {
        		select_reset.setOnClickListener( new View.OnClickListener() {
     		    @Override
     		    public void onClick(View v) {
-    		    	
+    		    		order.pizza_size=" ";
+    		    		order.pizza_toppings=" ";
+    		    		order.pizza_veggies=" ";
+    		    		order.pizza_flavor=" ";
+    		    		order.pizza_flavor2=" ";
+    		    		order.pizza_sauce=" ";
+    		    		
+    		        	Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE) ;
+    		    		vibe.vibrate(50);
 
     		        builder.setTitle("Confirm");
     		        builder.setMessage("Are you sure?");
@@ -111,12 +121,7 @@ public class Pizza_flavor extends Activity {
     		            public void onClick(DialogInterface dialog, int which) {
     		                // Do nothing but close the dialog
 
-    						order.pizza_size=" ";
-    						order.pizza_toppings=" ";
-    						order.pizza_veggies=" ";
-    						order.pizza_flavor=" ";
-    						order.pizza_sauce=" ";
-        		           	Intent intent_reset=new Intent(Pizza_flavor.this, Pizza.class);
+        		           	Intent intent_reset=new Intent(Pizza_flavor.this, Category.class);
         		        startActivity(intent_reset);
 
     		                dialog.dismiss();
@@ -208,6 +213,15 @@ public class Pizza_flavor extends Activity {
 	}
 	@Override
 	public void onBackPressed() {
+		order.pizza_size=" ";
+		order.pizza_toppings=" ";
+		order.pizza_veggies=" ";
+		order.pizza_flavor=" ";
+		order.pizza_flavor2=" ";
+		order.pizza_sauce=" ";
+    	Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE) ;
+		vibe.vibrate(50);
+	
 		Intent home=new Intent(Pizza_flavor.this, Category.class);
         startActivity(home);
 	}

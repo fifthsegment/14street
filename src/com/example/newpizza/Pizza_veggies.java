@@ -5,20 +5,31 @@ import java.util.ArrayList;
 import com.newPizza.order.order;
 
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Point;
+import android.graphics.drawable.BitmapDrawable;
 import android.util.SparseBooleanArray;
+import android.view.Display;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.PopupWindow;
 
 public class Pizza_veggies extends Activity {
+	Point p;
 	public final static String[] pizza_veggies_list_static={"Onions","Tomatoes","Capsicum","Jalapenoes",
 		"Mushrooms","Red Chilli","Green Chilli","Olives"};
 	ListView veggies_list;
@@ -103,7 +114,11 @@ public class Pizza_veggies extends Activity {
 		    @Override
 		    public void onClick(View v) {
 		    	
-
+            	Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE) ;
+        		vibe.vibrate(50);
+        		Intent home=new Intent(Pizza_veggies.this, Category.class);
+                startActivity(home);
+        	
 		        builder.setTitle("Confirm");
 		        builder.setMessage("Are you sure?");
 
@@ -116,6 +131,7 @@ public class Pizza_veggies extends Activity {
 						order.pizza_toppings=" ";
 						order.pizza_veggies=" ";
 						order.pizza_flavor=" ";
+						order.pizza_flavor2=" ";
 						order.pizza_sauce=" ";
     		           	Intent intent_reset=new Intent(Pizza_veggies.this, Pizza.class);
     		        startActivity(intent_reset);
@@ -165,7 +181,7 @@ public class Pizza_veggies extends Activity {
 		       		        }
 		        if(true){
 
-		            if(order.pizza_veggies==" ")
+		           /* if(order.pizza_veggies==" ")
 			        {
 			            errbox.setMessage("Please select pizza veggies").setTitle("Order Not Completed Yet")
 			            .setCancelable(true)
@@ -178,7 +194,7 @@ public class Pizza_veggies extends Activity {
 			            .show();
 			            x=1;
 
-		        }
+		        }*/
 		            if(order.pizza_sauce==" ")
 			        {
 			            errbox.setMessage("Please select pizza sauce").setTitle("Order Not Completed Yet")
@@ -195,7 +211,7 @@ public class Pizza_veggies extends Activity {
 
 
 		        }
-		            if(order.pizza_toppings==" ")
+		           /* if(order.pizza_toppings==" ")
 			        {
 			            errbox.setMessage("Please select pizza Toppings").setTitle("Order Not Completed Yet")
 			            .setCancelable(true)
@@ -211,7 +227,7 @@ public class Pizza_veggies extends Activity {
 			            x=1;
 			            
 
-		        }
+		        }*/
 
 		        if(order.pizza_flavor==" ")
 		        {
@@ -252,7 +268,10 @@ public class Pizza_veggies extends Activity {
 		       }
 		            if(x!=1){
 
-		        order.pizza=order.pizza_size+";"+order.pizza_flavor+";"+order.pizza_toppings+";"+order.pizza_sauce+";"+order.pizza_veggies;
+		            	if(order.pizza_flavor==" ")
+		            		order.pizza=order.pizza.concat("Size="+order.pizza_size+";Flavor="+order.pizza_flavor+";Toppings="+order.pizza_toppings+";Sauce="+order.pizza_sauce+";Veggies="+order.pizza_veggies);
+		            	else
+		            		order.pizza=order.pizza.concat("Size="+order.pizza_size+";Flavor1="+order.pizza_flavor+";Flavor2="+order.pizza_flavor2+";Toppings="+order.pizza_toppings+";Sauce="+order.pizza_sauce+";Veggies="+order.pizza_veggies);
 		       // order.pizza_veggies=outputStrArr[0];
 		        Intent intent_confirm=new Intent(Pizza_veggies.this, Confirm_order.class);
 		        startActivity(intent_confirm);
@@ -285,7 +304,7 @@ public class Pizza_veggies extends Activity {
 		       		        }
 		        if(true){
 
-		            if(order.pizza_veggies==" ")
+		           /* if(order.pizza_veggies==" ")
 			        {
 			            errbox.setMessage("Please select pizza veggies").setTitle("Order Not Completed Yet")
 			            .setCancelable(true)
@@ -298,7 +317,7 @@ public class Pizza_veggies extends Activity {
 			            .show();
 			            x=1;
 
-		        }
+		        }*/
 		            if(order.pizza_sauce==" ")
 			        {
 			            errbox.setMessage("Please select pizza sauce").setTitle("Order Not Completed Yet")
@@ -317,7 +336,7 @@ public class Pizza_veggies extends Activity {
 
 
 		        }
-		            if(order.pizza_toppings==" ")
+		           /* if(order.pizza_toppings==" ")
 			        {
 			            errbox.setMessage("Please select pizza Toppings").setTitle("Order Not Completed Yet")
 			            .setCancelable(true)
@@ -334,7 +353,7 @@ public class Pizza_veggies extends Activity {
 			            
 
 		        }
-
+*/
 		        if(order.pizza_flavor==" ")
 		        {
 		            errbox.setMessage("Please select pizza flavor").setTitle("Order Not Completed Yet")
@@ -373,9 +392,13 @@ public class Pizza_veggies extends Activity {
 		        }
 		       }
 		            if(x!=1){
+		            	
+		            	if(order.pizza_flavor==" ")
+		            		order.pizza=order.pizza.concat("Size="+order.pizza_size+";Flavor="+order.pizza_flavor+";Toppings="+order.pizza_toppings+";Sauce="+order.pizza_sauce+";Veggies="+order.pizza_veggies);
+		            	else
+		            		order.pizza=order.pizza.concat("Size="+order.pizza_size+";Flavor1="+order.pizza_flavor+";Flavor2="+order.pizza_flavor2+";Toppings="+order.pizza_toppings+";Sauce="+order.pizza_sauce+";Veggies="+order.pizza_veggies);
 
-		        order.pizza=order.pizza.concat("size="+order.pizza_size+";flavor="+order.pizza_flavor+";toppings="+order.pizza_toppings+";sauce="+order.pizza_sauce+";veggies="+order.pizza_veggies)+",";
-		       // order.pizza_veggies=outputStrArr[0];
+		            	// order.pizza_veggies=outputStrArr[0];
 		        Intent intent_confirm=new Intent(Pizza_veggies.this, Confirm_order.class);
 		        startActivity(intent_confirm);
 		            }
@@ -393,9 +416,19 @@ public class Pizza_veggies extends Activity {
 
 	@Override
 	public void onBackPressed() {
+		order.pizza_size=" ";
+		order.pizza_toppings=" ";
+		order.pizza_veggies=" ";
+		order.pizza_flavor=" ";
+		order.pizza_flavor2=" ";
+		order.pizza_sauce=" ";
+    	Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE) ;
+		vibe.vibrate(50);
 		Intent home=new Intent(Pizza_veggies.this, Category.class);
         startActivity(home);
+	
 	}
+	
 }
 
 
